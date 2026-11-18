@@ -1,22 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/onepage.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from 'react-router-dom';
 
+// 원페이지 구성이라 라우터 없이 렌더링합니다.
+// 메뉴는 #앵커로만 이동하므로 gh-pages(/portfolio_2023)에서 새로고침해도 같은 index.html이 열립니다.
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+    document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-          <App/>
-      </BrowserRouter>
-  </React.StrictMode>
+    <React.StrictMode>
+        <App/>
+    </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

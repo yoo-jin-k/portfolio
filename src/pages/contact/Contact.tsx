@@ -36,7 +36,7 @@ const Contact = () => {
                                                 </Col>
                                                 <Col span={24}>
                                                     <Button block size="large" type="primary"
-                                                            href={'mailto:dbwls_0811@naver.com'}><MailOutlined
+                                                            href={'mailto:dbwls.g4o8@gmail.com'}><MailOutlined
                                                         className={'point_color'}/> dbwls.g4o8@gmail.com</Button>
                                                 </Col>
                                                 <Col span={24}>

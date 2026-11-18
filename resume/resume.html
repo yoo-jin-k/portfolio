@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--
+  공개용 이력서 원본입니다. 포트폴리오에서 누구나 내려받을 수 있으므로
+  주소·나이·사진·연봉·퇴사 사유·전화번호는 넣지 않습니다.
+  수정한 뒤 `npm run resume:pdf`로 public/resume.pdf를 다시 만듭니다.
+-->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>김유진 이력서</title>
+<style>
+  /* A4 용지, 상하좌우 여백 16mm */
+  @page { size: A4; margin: 16mm 16mm 16mm; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    /* PDF를 만드는 컴퓨터에 설치된 글꼴을 씁니다 (Mac: 애플 SD 고딕 Neo) */
+    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    font-size: 9.6pt;
+    line-height: 1.6;
+    color: #14171C;
+    word-break: keep-all;
+  }
+  h1, h2, h3, p, ul { margin: 0; }
+  ul { padding-left: 1.1em; }
+  li + li { margin-top: 1.5pt; }
+  a { color: #2447C9; text-decoration: none; }
+
+  /* 맨 위 이름·한 줄 소개·연락처 */
+  header { padding-bottom: 10pt; border-bottom: 1.4pt solid #14171C; }
+  h1 { font-size: 22pt; line-height: 1.2; }
+  .subtitle { margin-top: 3pt; font-size: 12pt; font-weight: 700; color: #3A404A; }
+  .contact { margin-top: 6pt; color: #3A404A; }
+  .contact span + span::before { content: '·'; margin: 0 6pt; color: #9AA0AA; }
+
+  /* 소개, 경력 등 큰 묶음과 그 제목 */
+  section { margin-top: 14pt; }
+  h2 {
+    font-size: 11pt;
+    padding-bottom: 4pt;
+    margin-bottom: 7pt;
+    border-bottom: 0.6pt solid #C9CDD4;
+    color: #2447C9;
+  }
+  .intro p + p { margin-top: 4pt; }
+
+  /* 한 항목 = 왼쪽 기간 칸 + 오른쪽 내용 칸.
+     항목 전체를 한 페이지에 묶으면 빈 공간이 크게 생겨서, 프로젝트 단위로만 페이지가 나뉘지 않게 합니다. */
+  .item { display: grid; grid-template-columns: 88pt 1fr; gap: 0 12pt; }
+  .item + .item { margin-top: 10pt; }
+  .when { color: #565D69; font-size: 8.8pt; }
+  h3 { font-size: 10.4pt; }
+  h3 small { font-size: 8.8pt; font-weight: 400; color: #565D69; margin-left: 5pt; }
+  .project { margin-top: 5pt; break-inside: avoid; }
+  .project-name { font-weight: 700; }
+  /* 성과 한 줄은 파란색으로 강조 */
+  .accent { color: #2447C9; font-weight: 600; }
+  .stack { margin-top: 3pt; color: #565D69; font-size: 8.8pt; }
+
+  /* 기술: 왼쪽 분류, 오른쪽 기술 이름 */
+  .skills { display: grid; grid-template-columns: 88pt 1fr; gap: 3pt 12pt; }
+  .skills dt { color: #565D69; }
+  .skills dd { margin: 0; }
+  .rows .item + .item { margin-top: 4pt; }
+</style>
+</head>
+<body>
+<!-- 공개해도 되는 연락처만 적습니다 (전화번호·주소 제외) -->
+<header>
+  <h1>김유진</h1>
+  <p class="subtitle">화면과 서버를 함께 이해하는 백엔드 개발자 · 개발 경력 4년 5개월</p>
+  <p class="contact">
+    <span><a href="mailto:dbwls.g4o8@gmail.com">dbwls.g4o8@gmail.com</a></span>
+    <span><a href="https://portfolio.yjinee.com">portfolio.yjinee.com</a></span>
+    <span><a href="https://github.com/yoo-jin-k">github.com/yoo-jin-k</a></span>
+  </p>
+</header>
+
+<section class="intro">
+  <h2>소개</h2>
+  <p>웹 퍼블리싱과 React·React Native 기반 웹·앱 개발을 거쳐, Java/Spring 기반 백엔드 개발과 데이터 마이그레이션까지 경험을 넓혀왔습니다. 사용자 화면부터 API, 업무 로직, 데이터베이스로 이어지는 흐름을 함께 살피며 개발합니다.</p>
+  <p>사내 업무 시스템의 백엔드 설계·개발을 담당하며 원가 계산과 비용 집계, 다단계 결재, 프로젝트 자금 현황, 연차·휴가 등 업무 규칙을 구현했습니다. 기존 외부 서비스의 업무를 사내 시스템으로 전환하는 기능을 개발하여 구독 비용 절감에도 기여했습니다.</p>
+</section>
+
+<section>
+  <h2>핵심 역량</h2>
+  <ul>
+    <li>백엔드 개발: Java/Spring 기반 API 설계 및 업무 규칙 구현</li>
+    <li>데이터 처리: JPA·Querydsl·MyBatis 기반 조회·집계 및 데이터 관리</li>
+    <li>업무 시스템: 원가·예산·결재·자금·연차 관리 기능 개발</li>
+    <li>웹·앱 개발: React·TypeScript·React Native 기반 화면 개발</li>
+    <li>마이그레이션·운영: 데이터 이관, 누락·불일치 검증, 운영 오류 분석·대응</li>
+  </ul>
+</section>
+
+<section>
+  <h2>경력</h2>
+
+  <div class="item">
+    <p class="when">2024.12 – 2025.12<br>1년 1개월</p>
+    <div>
+      <h3>퍼스트테크(주)<small>SA 주임 · 백엔드/서버 개발</small></h3>
+      <div class="project">
+        <p class="project-name">사내 업무 포털 — 원가관리 연계 및 업무 기능 확장</p>
+        <ul>
+          <li>원가관리 시스템과 업무 포털의 데이터 흐름을 분석해 프로젝트 진행·업무 처리 상태를 반영하는 연계 조회 기능 개발</li>
+          <li>고객사·협력사별 선금·중도금·잔금 정보를 연계한 프로젝트 자금 현황 조회 화면 구현</li>
+          <li>예정일과 실제 처리 내역을 비교해 세금계산서 미발행·미접수, 미입금·미지불 항목을 구분하는 SQL·API 및 화면 개발</li>
+          <li>휴가 신청·취소와 결재 결과에 따른 사용·잔여 연차 처리, 연차 생성·마감 검증 로직 구현</li>
+          <li>연차·휴가·출장 현황 검색 결과를 엑셀로 내보내는 공통 기능 구현</li>
+          <li class="accent">사내 업무 기능을 계속 확장·보완해 비즈메카 대체 사용을 지원하고 구독 비용 절감 유지에 기여</li>
+        </ul>
+        <p class="stack">Java, Spring Boot, MyBatis, MySQL, React, JavaScript, Axios, xlsx-js-style</p>
+      </div>
+      <div class="project">
+        <p class="project-name">SDS GCS 2.0 — HMI 마이그레이션 및 설비 운영 지원</p>
+        <ul>
+          <li>웹 기반 GCS 2.0 전환에 따른 설비 데이터 이관 및 정보 등록·수정, 실제 설비 구성을 반영한 HMI 화면 배치 정비</li>
+          <li>서버 부하율과 시스템 운영 상태 점검, 운영 이슈 분석 후 설비 정보·화면 보완</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <p class="when">2023.05 – 2024.12<br>1년 8개월</p>
+    <div>
+      <h3>메카테크놀러지(주)<small>SP 주임 · 백엔드/서버 개발</small></h3>
+      <div class="project">
+        <p class="project-name">사내 프로젝트 원가관리 시스템 — 백엔드 설계·개발</p>
+        <ul>
+          <li>업무 프로세스와 요구사항을 분석해 데이터베이스 구조와 프론트엔드 연동 API 설계·구현</li>
+          <li>투입 공수(M/M)와 직급별 단가를 적용한 인건비 계산, 프로젝트·원가 버전별 비용 집계 구현</li>
+          <li>공통 단가와 프로젝트별 단가를 구분하고 실행예산·실적 비교를 위한 조회·집계 API 개발</li>
+          <li>다단계 결재의 승인·반려·회수 처리와 최종 승인에 따른 원가 버전 확정·프로젝트 상태 갱신 연계</li>
+          <li class="accent">비즈메카에서 하던 업무를 사내 시스템으로 대체하는 기능을 개발해 외부 서비스 구독 비용 절감에 기여</li>
+        </ul>
+        <p class="stack">Java, Spring Boot, 전자정부프레임워크, Spring Data JPA, Querydsl, MyBatis, MySQL, Spring Security, JWT, React</p>
+      </div>
+      <div class="project">
+        <p class="project-name">SDS GCS 2.0 — 데이터·UI 마이그레이션 및 운영 지원</p>
+        <ul>
+          <li>기존 데이터 구조를 분석해 이관 대상 데이터 선별·추출, 이관 전후 누락·불일치 검증 및 보정 쿼리 적용</li>
+          <li>시스템 전환에 따른 UI 이관, 사용자 요청사항·VOC와 운영 오류 분석 후 데이터·화면 수정</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <p class="when">2023.01 – 2023.03<br>3개월</p>
+    <div>
+      <h3>리버밴스<small>개발부 사원 · 프론트엔드</small></h3>
+      <ul>
+        <li>React 기반 홈페이지·블록체인 웹 서비스의 화면 구조와 데이터 흐름을 분석해 기능 개선 및 유지보수</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="item">
+    <p class="when">2021.04 – 2022.05<br>1년 2개월</p>
+    <div>
+      <h3>뉴테크프라임<small>개발부 사원 · 프론트엔드</small></h3>
+      <ul>
+        <li>React·TypeScript로 블록체인 서비스의 풀·스왑·교환 등 주요 웹 화면 구현과 API 데이터 연계</li>
+        <li>React Native 모바일 앱 화면 개발(출시 전 테스트 단계까지 참여), 기업 홈페이지 반응형 제작·유지보수</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="item">
+    <p class="when">2021.02 – 2021.04<br>3개월</p>
+    <div>
+      <h3>골프유닷넷<small>개발부 사원 · 웹 퍼블리싱</small></h3>
+      <ul>
+        <li>자사 웹사이트 UI 디자인·퍼블리싱과 골프 예약 앱 사용자 화면 구현 참여</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>진행 중인 프로젝트</h2>
+  <div class="item">
+    <p class="when">2026.08 – 현재<br>개인</p>
+    <div>
+      <h3>MOVRIT<small>체험단 캠페인 운영 플랫폼 + LLM 작성·점검 도우미</small></h3>
+      <ul>
+        <li>참여자·업체·운영자 3개 역할의 신청·선정·제출·검토·승인 흐름 구현 (API 약 300개, 테이블 70여 개)</li>
+        <li>Claude API 캠페인 초안·제출 전 점검: 모델 연결 분리(LlmClient), 응답 서버 검증, 하루 호출 한도·토큰 기록</li>
+        <li>비관적 락·버전 비교로 동시성 처리, JWT·소셜 로그인, Flyway·자동 테스트·GitHub Actions. AI 코딩 도구에 지시해 시연 서버 배포</li>
+      </ul>
+      <p class="stack">Java 17, Spring Boot, Spring Data JPA, PostgreSQL, Flyway, Claude API, React · movrit.yjinee.com · github.com/yoo-jin-k/movrit-backend</p>
+    </div>
+  </div>
+  <div class="item">
+    <p class="when">2026.09 – 현재</p>
+    <div>
+      <h3>루핏 (Rufit)<small>운동 기록 앱</small></h3>
+      <ul>
+        <li>운동 루틴·이력·세트/휴식·저장 복구 API 구현, PostgreSQL 14개 테이블 설계</li>
+        <li>Flyway 마이그레이션과 PostgreSQL 기반 CI로 보안·API 테스트 자동 검증, Expo·React Native iOS 앱 개발</li>
+      </ul>
+      <p class="stack">Java 21, Spring Boot, PostgreSQL, Flyway, React Native, Expo, TypeScript</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>기술</h2>
+  <dl class="skills">
+    <dt>실무 주력</dt><dd>Java, Spring Boot, MyBatis, Spring Data JPA, Querydsl, MySQL, SQL</dd>
+    <dt>사용 경험</dt><dd>전자정부프레임워크, Spring Security, JWT, React, TypeScript, JavaScript, React Native, jQuery, Oracle, AWS</dd>
+    <dt>도구</dt><dd>IntelliJ, Git/GitHub, Gradle, Maven, DBeaver, Figma, AI 개발 도구</dd>
+  </dl>
+</section>
+
+<section class="rows">
+  <h2>학력 · 교육 · 자격</h2>
+  <div class="item"><p class="when">2023.10 – 2027.02</p><p>국가평생교육진흥원(학점은행제) 컴퓨터공학 · 졸업예정</p></div>
+  <div class="item"><p class="when">2022.08 – 2022.12</p><p>한국소프트웨어기술진흥협회(KOSTA) Java/Spring 기반 웹 개발자 양성과정 수료</p></div>
+  <div class="item"><p class="when">2020.04 – 2020.10</p><p>더조은컴퓨터 반응형 UI/UX 웹퍼블리셔 과정 수료</p></div>
+  <div class="item"><p class="when">2014.03 – 2017.03</p><p>국제대학 IT(컴퓨터정보) 졸업</p></div>
+  <div class="item"><p class="when">2026.10</p><p>컴퓨터활용능력 2급 (대한상공회의소)</p></div>
+  <div class="item"><p class="when">2020.08</p><p>GTQ(그래픽기술자격) 1급 (한국생산성본부)</p></div>
+</section>
+</body>
+</html>

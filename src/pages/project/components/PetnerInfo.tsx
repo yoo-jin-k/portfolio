@@ -110,7 +110,7 @@ const PetnerInfo = () => {
                                             </Text>
                                         </Col>
                                         <Col span={isMd?8:24}>
-                                            <Title level={5} ><PushpinOutlined /> 펫세터</Title>
+                                            <Title level={5} ><PushpinOutlined /> 펫시터</Title>
                                             <Text>
                                             반려동물 찾기(구직)<br/>
                                             리뷰 작성

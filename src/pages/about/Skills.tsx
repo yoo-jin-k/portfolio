@@ -8,7 +8,7 @@ const Skills = () => {
         <Row className={'skill_info'} >
             <Col span={isMd?12:24}>
                 {/*언어 개발 툴*/}
-                <Row><CaretRightOutlined /> Jave/JSP</Row>
+                <Row><CaretRightOutlined /> Java/JSP</Row>
                 <Row><CaretRightOutlined /> TypeScript</Row>
                 <Row><CaretRightOutlined /> JavaScript</Row>
                 <Row><CaretRightOutlined /> jQuery</Row>
@@ -25,7 +25,7 @@ const Skills = () => {
                 <Row><CaretRightOutlined /> SpringBoot</Row>
                 <Row><CaretRightOutlined /> MyBatis</Row>
                 <Row><CaretRightOutlined /> Thymeleaf</Row>
-                <Row><CaretRightOutlined /> Lombook</Row>
+                <Row><CaretRightOutlined /> Lombok</Row>
                 <Row><CaretRightOutlined /> Bootstrap/Antd/Material</Row>
 
             </Col>
