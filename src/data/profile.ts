@@ -25,8 +25,8 @@ export const profile = {
     email: 'dbwls.g4o8@gmail.com',
     github: 'https://github.com/yoo-jin-k',
     // '이력서 PDF' 버튼이 내려받는 파일입니다.
-    // public/resume.pdf는 resume/resume.html로 만든 공개용 이력서이며,
-    // 내용을 고친 뒤 `npm run resume:pdf`를 실행하면 다시 만들어집니다.
+    // public/resume.pdf는 따로 받은 이력서 PDF를 그대로 넣은 파일입니다.
+    // `npm run resume:pdf`를 실행하면 resume/resume.html 기준으로 덮어쓰니 주의합니다.
     resumePdf: `${process.env.PUBLIC_URL}/resume.pdf`,
     // 내려받을 때 저장되는 파일 이름
     resumeFileName: '김유진_백엔드개발자_이력서.pdf',
