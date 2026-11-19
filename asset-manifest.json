@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.60a8ae2e.css",
-    "main.js": "/static/js/main.ed880fae.js",
+    "main.js": "/static/js/main.7782da56.js",
     "static/media/main_img.jpg": "/static/media/main_img.2b3ba8a1adceb6b59268.jpg",
     "static/media/petner_main.png": "/static/media/petner_main.cc0fd25936af56cede5d.png",
     "index.html": "/index.html",
     "main.60a8ae2e.css.map": "/static/css/main.60a8ae2e.css.map",
-    "main.ed880fae.js.map": "/static/js/main.ed880fae.js.map"
+    "main.7782da56.js.map": "/static/js/main.7782da56.js.map"
   },
   "entrypoints": [
     "static/css/main.60a8ae2e.css",
-    "static/js/main.ed880fae.js"
+    "static/js/main.7782da56.js"
   ]
 }
