@@ -68,7 +68,7 @@
 <!-- 공개해도 되는 연락처만 적습니다 (전화번호·주소 제외) -->
 <header>
   <h1>김유진</h1>
-  <p class="subtitle">화면과 서버를 함께 이해하는 백엔드 개발자 · 개발 경력 4년 5개월</p>
+  <p class="subtitle">화면과 서버를 함께 이해하는 백엔드 개발자 · 총 개발 경력 4년 5개월 · Java 백엔드 약 2년 8개월</p>
   <p class="contact">
     <span><a href="mailto:dbwls.g4o8@gmail.com">dbwls.g4o8@gmail.com</a></span>
     <span><a href="https://portfolio.yjinee.com">portfolio.yjinee.com</a></span>
@@ -79,17 +79,17 @@
 <section class="intro">
   <h2>소개</h2>
   <p>웹 퍼블리싱과 React·React Native 기반 웹·앱 개발을 거쳐, Java/Spring 기반 백엔드 개발과 데이터 마이그레이션까지 경험을 넓혀왔습니다. 사용자 화면부터 API, 업무 로직, 데이터베이스로 이어지는 흐름을 함께 살피며 개발합니다.</p>
-  <p>사내 업무 시스템의 백엔드 설계·개발을 담당하며 원가 계산과 비용 집계, 다단계 결재, 프로젝트 자금 현황, 연차·휴가 등 업무 규칙을 구현했습니다. 기존 외부 서비스의 업무를 사내 시스템으로 전환하는 기능을 개발하여 구독 비용 절감에도 기여했습니다.</p>
+  <p>사내 업무 시스템의 백엔드 설계·개발을 담당하며 원가 계산과 비용 집계, 다단계 결재, 프로젝트 자금 현황, 연차·휴가 등 업무 규칙을 구현했습니다. 기존 외부 서비스의 업무를 사내 시스템으로 전환하는 기능을 개발했습니다.</p>
 </section>
 
 <section>
   <h2>핵심 역량</h2>
   <ul>
-    <li>백엔드 개발: Java/Spring 기반 API 설계 및 업무 규칙 구현</li>
-    <li>데이터 처리: JPA·Querydsl·MyBatis 기반 조회·집계 및 데이터 관리</li>
-    <li>업무 시스템: 원가·예산·결재·자금·연차 관리 기능 개발</li>
+    <li>백엔드 개발: Java/Spring 기반 REST API 설계·개발</li>
+    <li>데이터 처리: JPA·Querydsl·MyBatis 기반 조회·집계 쿼리 작성</li>
+    <li>계산·상태 로직: 인건비 산정, 원가 버전별 집계, 결재 승인·반려·회수 처리</li>
     <li>웹·앱 개발: React·TypeScript·React Native 기반 화면 개발</li>
-    <li>마이그레이션·운영: 데이터 이관, 누락·불일치 검증, 운영 오류 분석·대응</li>
+    <li>마이그레이션·운영: 데이터 마이그레이션·매핑, 누락·불일치 검증, 운영 오류 분석·대응</li>
   </ul>
 </section>
 
@@ -101,28 +101,29 @@
     <div>
       <h3>퍼스트테크(주)<small>SA 주임 · 백엔드/서버 개발</small></h3>
       <div class="project">
-        <p class="project-name">사내 업무 포털 — 원가관리 연계 및 업무 기능 확장</p>
+        <p class="project-name">사내 업무 포털 — 백엔드 및 추가 기능 화면 개발</p>
         <ul>
-          <li>원가관리 시스템과 업무 포털의 데이터 흐름을 분석해 프로젝트 진행·업무 처리 상태를 반영하는 연계 조회 기능 개발</li>
+          <li>원가관리 스키마를 교차 조회해 데이터를 연계하고 원가관리 화면 진입 시 SSO 토큰 발급 연동</li>
           <li>고객사·협력사별 선금·중도금·잔금 정보를 연계한 프로젝트 자금 현황 조회 화면 구현</li>
           <li>예정일과 실제 처리 내역을 비교해 세금계산서 미발행·미접수, 미입금·미지불 항목을 구분하는 SQL·API 및 화면 개발</li>
           <li>휴가 신청·취소와 결재 결과에 따른 사용·잔여 연차 처리, 연차 생성·마감 검증 로직 구현</li>
           <li>연차·휴가·출장 현황 검색 결과를 엑셀로 내보내는 공통 기능 구현</li>
-          <li class="accent">사내 업무 기능을 계속 확장·보완해 비즈메카 대체 사용을 지원하고 구독 비용 절감 유지에 기여</li>
+          <li class="accent">비즈메카에서 처리하던 업무를 사내 시스템에서 처리하도록 기능 보완</li>
         </ul>
         <p class="stack">Java, Spring Boot, MyBatis, MySQL, React, JavaScript, Axios, xlsx-js-style</p>
       </div>
       <div class="project">
-        <p class="project-name">SDS GCS 2.0 — HMI 마이그레이션 및 설비 운영 지원</p>
+        <p class="project-name">미국 SDS GCS 2.0 — HMI 마이그레이션 및 설비 운영 지원</p>
         <ul>
-          <li>웹 기반 GCS 2.0 전환에 따른 설비 데이터 이관 및 정보 등록·수정, 실제 설비 구성을 반영한 HMI 화면 배치 정비</li>
-          <li>서버 부하율과 시스템 운영 상태 점검, 운영 이슈 분석 후 설비 정보·화면 보완</li>
+          <li>기존 데이터 분석·이관 대상 선별·추출, 기존·신규 시스템 간 데이터 매핑, 이관 전후 누락·불일치 검증과 보정 쿼리 작성·적용</li>
+          <li>기존 UI 이관, 설비 위치·구성 변경과 신규 설비 도입을 반영한 HMI 화면 배치 정비 및 설비 정보 등록·수정</li>
+          <li>설비 알람 스크립트 검수·알람 데이터 취합, 서버 상태 점검, 사용자 요청·VOC 및 운영 이슈 대응</li>
         </ul>
       </div>
     </div>
   </div>
 
-  <div class="item">
+  <div class="item" style="break-before: page;">
     <p class="when">2023.05 – 2024.12<br>1년 8개월</p>
     <div>
       <h3>메카테크놀러지(주)<small>SP 주임 · 백엔드/서버 개발</small></h3>
@@ -130,18 +131,19 @@
         <p class="project-name">사내 프로젝트 원가관리 시스템 — 백엔드 설계·개발</p>
         <ul>
           <li>업무 프로세스와 요구사항을 분석해 데이터베이스 구조와 프론트엔드 연동 API 설계·구현</li>
-          <li>투입 공수(M/M)와 직급별 단가를 적용한 인건비 계산, 프로젝트·원가 버전별 비용 집계 구현</li>
-          <li>공통 단가와 프로젝트별 단가를 구분하고 실행예산·실적 비교를 위한 조회·집계 API 개발</li>
+          <li>투입 공수(M/M)와 직급·시점별 단가를 적용한 인건비 산정, 공통 기준 단가와 프로젝트별 단가 분리 관리</li>
+          <li>사전원가·실행예산·실적/정산 모드별 비용 집계와 실행원가서·사후정산서 등 원가 문서 산출 연계</li>
           <li>다단계 결재의 승인·반려·회수 처리와 최종 승인에 따른 원가 버전 확정·프로젝트 상태 갱신 연계</li>
-          <li class="accent">비즈메카에서 하던 업무를 사내 시스템으로 대체하는 기능을 개발해 외부 서비스 구독 비용 절감에 기여</li>
+          <li class="accent">비즈메카에서 처리하던 업무를 사내 시스템으로 대체하는 기능 개발</li>
         </ul>
-        <p class="stack">Java, Spring Boot, 전자정부프레임워크, Spring Data JPA, Querydsl, MyBatis, MySQL, Spring Security, JWT, React</p>
+        <p class="stack">Java, Spring Boot, 전자정부프레임워크, Spring Data JPA, Querydsl, MyBatis, MySQL</p>
       </div>
       <div class="project">
-        <p class="project-name">SDS GCS 2.0 — 데이터·UI 마이그레이션 및 운영 지원</p>
+        <p class="project-name">SDS GCS 2.0 — HMI 마이그레이션 및 설비 운영 지원</p>
         <ul>
-          <li>기존 데이터 구조를 분석해 이관 대상 데이터 선별·추출, 이관 전후 누락·불일치 검증 및 보정 쿼리 적용</li>
-          <li>시스템 전환에 따른 UI 이관, 사용자 요청사항·VOC와 운영 오류 분석 후 데이터·화면 수정</li>
+          <li>기존 데이터 분석·이관 대상 선별·추출, 기존·신규 시스템 간 데이터 매핑, 이관 전후 누락·불일치 검증과 보정 쿼리 작성·적용</li>
+          <li>기존 UI 이관, 설비 위치·구성 변경과 신규 설비 도입을 반영한 HMI 화면 배치 정비 및 설비 정보 등록·수정</li>
+          <li>설비 알람 스크립트 검수·알람 데이터 취합, 서버 상태 점검, 사용자 요청·VOC 및 운영 이슈 대응</li>
         </ul>
       </div>
     </div>
@@ -180,37 +182,10 @@
 </section>
 
 <section>
-  <h2>진행 중인 프로젝트</h2>
-  <div class="item">
-    <p class="when">2026.08 – 현재<br>개인</p>
-    <div>
-      <h3>MOVRIT<small>체험단 캠페인 운영 플랫폼 + LLM 작성·점검 도우미</small></h3>
-      <ul>
-        <li>참여자·업체·운영자 3개 역할의 신청·선정·제출·검토·승인 흐름 구현 (API 약 300개, 테이블 70여 개)</li>
-        <li>Claude API 캠페인 초안·제출 전 점검: 모델 연결 분리(LlmClient), 응답 서버 검증, 하루 호출 한도·토큰 기록</li>
-        <li>비관적 락·버전 비교로 동시성 처리, JWT·소셜 로그인, Flyway·자동 테스트·GitHub Actions. AI 코딩 도구에 지시해 시연 서버 배포</li>
-      </ul>
-      <p class="stack">Java 17, Spring Boot, Spring Data JPA, PostgreSQL, Flyway, Claude API, React · movrit.yjinee.com · github.com/yoo-jin-k/movrit-backend</p>
-    </div>
-  </div>
-  <div class="item">
-    <p class="when">2026.09 – 현재</p>
-    <div>
-      <h3>루핏 (Rufit)<small>운동 기록 앱</small></h3>
-      <ul>
-        <li>운동 루틴·이력·세트/휴식·저장 복구 API 구현, PostgreSQL 14개 테이블 설계</li>
-        <li>Flyway 마이그레이션과 PostgreSQL 기반 CI로 보안·API 테스트 자동 검증, Expo·React Native iOS 앱 개발</li>
-      </ul>
-      <p class="stack">Java 21, Spring Boot, PostgreSQL, Flyway, React Native, Expo, TypeScript</p>
-    </div>
-  </div>
-</section>
-
-<section>
   <h2>기술</h2>
   <dl class="skills">
     <dt>실무 주력</dt><dd>Java, Spring Boot, MyBatis, Spring Data JPA, Querydsl, MySQL, SQL</dd>
-    <dt>사용 경험</dt><dd>전자정부프레임워크, Spring Security, JWT, React, TypeScript, JavaScript, React Native, jQuery, Oracle, AWS</dd>
+    <dt>사용 경험</dt><dd>전자정부프레임워크, React, TypeScript, JavaScript, React Native, jQuery</dd>
     <dt>도구</dt><dd>IntelliJ, Git/GitHub, Gradle, Maven, DBeaver, Figma, AI 개발 도구</dd>
   </dl>
 </section>

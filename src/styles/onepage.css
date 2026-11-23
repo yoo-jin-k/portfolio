@@ -550,12 +550,19 @@ section[id], #ongoing { scroll-margin-top: calc(var(--topbar-h) + 16px); }
 }
 
 .project-card__img {
+    position: relative;
+    width: 100%;
     aspect-ratio: 16 / 10;
+    flex-shrink: 0;
+    overflow: hidden;
     background: var(--bg);
     border-bottom: 1px solid var(--line);
 }
 
 .project-card__img img {
+    position: absolute;
+    inset: 0;
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;

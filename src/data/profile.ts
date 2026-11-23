@@ -9,7 +9,7 @@ export const profile = {
     intro:
         '웹 퍼블리싱과 React·React Native 개발을 거쳐 Java/Spring 백엔드와 데이터 마이그레이션까지 경험을 넓혀 왔습니다. ' +
         '사내 업무 시스템에서 원가 계산·비용 집계, 다단계 결재, 프로젝트 자금 현황, 연차·휴가 같은 업무 규칙을 구현했고, ' +
-        '외부 서비스 업무를 사내 시스템으로 옮겨 구독 비용 절감에 기여했습니다.',
+        '외부 서비스 업무를 사내 시스템으로 옮기는 기능을 개발했습니다.',
     // 소개 아래에 보여 주는 처리 흐름 그림.
     // 마지막 항목만 포인트색으로 표시됩니다.
     flow: ['View', 'Controller', 'Service', 'Mapper', 'DB'],
@@ -17,7 +17,7 @@ export const profile = {
     nowBadge: '지금은 체험단 캠페인 플랫폼 MOVRIT과 운동 기록 앱 루핏을 개발하고 있어요',
     // 첫 화면 아래 네 칸짜리 요약표
     summary: [
-        {label: '경력', value: '총 4년 5개월 (백엔드 2년 9개월)'},
+        {label: '경력', value: '총 4년 5개월 (Java 백엔드 약 2년 8개월)'},
         {label: '주력 기술', value: 'Java · Spring Boot · MyBatis · JPA'},
         {label: '도메인', value: '원가 · 결재 · 자금 · 연차'},
         {label: '최근 업무', value: '사내 업무 포털 기능 확장'},

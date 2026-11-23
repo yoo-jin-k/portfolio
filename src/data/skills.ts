@@ -13,7 +13,11 @@ export const skillGroups: SkillGroup[] = [
     },
     {
         title: '사용 경험 있음',
-        items: ['전자정부프레임워크', 'Spring Security', 'JWT', 'React', 'TypeScript', 'JavaScript', 'React Native', 'jQuery', 'Oracle', 'AWS'],
+        items: ['전자정부프레임워크', 'Spring Security', 'JWT', 'React', 'TypeScript', 'JavaScript', 'React Native', 'jQuery'],
+    },
+    {
+        title: '개인·교육 프로젝트에서 사용',
+        items: ['Oracle', 'PostgreSQL', 'Flyway', 'Claude API', 'Docker', 'GitHub Actions'],
     },
     {
         title: '도구',

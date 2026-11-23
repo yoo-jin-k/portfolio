@@ -6,8 +6,7 @@ const Hero = () => (
     <section className="hero" id="top">
         <div className="container">
             <p className="mono-label">{profile.label}</p>
-            <h1 className="hero__title">{profile.title}</h1>
-            <p className="hero__subtitle">{profile.subtitle}</p>
+            <h1 className="hero__subtitle">{profile.subtitle}</h1>
             <p className="hero__intro">{profile.intro}</p>
 
             <ol className="flow" aria-label="서비스 처리 흐름">
